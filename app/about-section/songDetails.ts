@@ -28,7 +28,7 @@ export const songs = [
     title: "Attention",
     artist: "Charlie Puth",
     image: require(".//../../public/songs/attention.jpeg"),
-    link: "https://open.spotify.com/track/0F3v8p8ZnEGtZDxNcJ5Klq",
+    link: "https://open.spotify.com/track/4iLqG9SeJSnt0cSPICSjxv",
   },
   {
     title: "Don’t Stop Believin",
