@@ -1,7 +1,7 @@
 .preloader {
   height: 100vh;
   width: 100%;
-  background: rgb(0, 0, 0);
+  background: black;
   color: #e4ded7;
   position: fixed;
   bottom: 0;
