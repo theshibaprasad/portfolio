@@ -12,7 +12,7 @@ const Footer = () => {
       animate="animate"
     >
       <motion.div className="mx-auto flex w-[90%] flex-col items-center justify-center gap-3 text-center text-[10px] text-[#e4ded7] sm:flex-row sm:justify-between sm:text-[12px] md:text-[14px] lg:max-w-[1440px] lg:text-[14px]">
-        <AnimatedBody text={`Copyright ${year}`} className={"m-0 p-0"} />
+        <AnimatedBody text={`© ${year} | All Rights? Nah, All Lefts 🚦`} className={"m-0 p-0"} />
         
         <div className="flex items-center gap-1.5 text-[#e4ded7] sm:gap-2">
           <span className="text-[10px] font-bold sm:text-[14px] md:text-[16px]">Made with</span>
