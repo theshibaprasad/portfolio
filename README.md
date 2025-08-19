@@ -1,64 +1,97 @@
 # Personal Portfolio Website — v1
 
-My name is Shiba Prasad, and I'm a front-end engineer and web designer based in Lagos, Nigeria. My passion lies in creating software that solves real-world problems and positively impacts people's lives.
+A modern, responsive portfolio website built with Next.js, showcasing my work as a Frontend Engineer and Web Designer.
 
-I created this website to showcase my work. I’m always striving to create something unique and innovative. I love experimenting with new technologies and staying up-to-date with the latest trends in the tech world.
+## 🚀 Features
 
-## Tech Stack
+- **Modern Design**: Clean, professional interface with smooth animations
+- **Responsive Layout**: Optimized for all devices (mobile, tablet, desktop)
+- **Interactive Elements**: Smooth scrolling, animated text, and dynamic content
+- **Performance Optimized**: Built with Next.js for fast loading and SEO
+- **Dark Theme**: Elegant dark color scheme with proper contrast
 
-**Client:** React, Next.js, TypeScript, TailwindCSS, Framer Motion, GSAP.
+## 🛠️ Tech Stack
 
-**Hosting:** Vercel.
+- **Framework**: Next.js 14 with App Router
+- **Styling**: Tailwind CSS for responsive design
+- **Animations**: Framer Motion for smooth interactions
+- **Icons**: FontAwesome for consistent iconography
+- **Fonts**: Custom typography with Mona Sans and Syne
+- **Deployment**: Vercel for optimal performance
 
-## Screenshots & Demo
+## 📱 Sections
 
-![App Screenshot](https://user-images.githubusercontent.com/84178696/228679118-47e63775-0635-42b2-8838-a80644ef612b.png)
+- **Hero Section**: Introduction with animated role typing and profile image
+- **Work Section**: Showcase of development and design projects
+- **Reviews Section**: Client testimonials and feedback
+- **About Section**: Personal background and skills
+- **Contact Section**: Professional contact information and social links
+- **Footer**: Additional information and links
 
-![App Screenshot](https://user-images.githubusercontent.com/84178696/228673498-ad33b834-58b3-43e5-b184-b136d01c6e1a.png)
+## 🎨 Design Features
 
-![App Screenshot](https://user-images.githubusercontent.com/84178696/228675919-70180c2c-c888-423d-ae85-409ce4645b8b.png)
+- **Smooth Animations**: Typing effects, fade-ins, and scroll-triggered animations
+- **Responsive Navigation**: Smart navigation bar that hides near footer
+- **Project Showcase**: Interactive project cards with rounded images
+- **Professional Typography**: Consistent text hierarchy and spacing
+- **Modern UI Elements**: Glassmorphism effects and smooth transitions
 
-[View Live Demo](https://folio-v1-shibaprasad.vercel.app/)
+## 🚀 Getting Started
 
-## Run Locally
+1. Clone the repository
+2. Install dependencies: `npm install`
+3. Run development server: `npm run dev`
+4. Build for production: `npm run build`
 
-Clone the project
+## 📁 Project Structure
 
-```bash
-  git clone https://github.com/shibaprasad/folio-v1
+```
+app/
+├── animations/          # Animation components and utilities
+├── about-section/       # About section components
+├── contact-section/     # Contact form and information
+├── footer/             # Footer component
+├── hero-section/       # Hero section with profile and typing
+├── navbar/             # Navigation component
+├── reviews-section/    # Testimonials and reviews
+├── work-section/       # Project showcase and work examples
+└── utils/              # Utility functions and configurations
 ```
 
-Go to the project directory
+## 🌟 Key Components
 
-```bash
-  cd folio-v1
-```
+- **TypingRoles**: Dynamic role animation in hero section
+- **ProjectCard**: Interactive project display with rounded images
+- **AnimatedWords**: Text animation components
+- **NavBar**: Smart navigation with scroll-based visibility
+- **PreLoader**: Loading screen with smooth transitions
 
-Install dependencies
+## 📱 Responsive Design
 
-```bash
-  npm install
-```
+- **Mobile First**: Optimized for 390x844 and similar mobile screens
+- **Tablet**: Responsive layouts for medium-sized devices
+- **Desktop**: Full-featured experience for larger screens
+- **Touch Friendly**: Optimized touch targets and interactions
 
-Start the server
+## 🎯 Performance
 
-```bash
-  npm run dev
-```
+- **Image Optimization**: Next.js Image component with proper sizing
+- **Code Splitting**: Dynamic imports for better loading
+- **Animation Performance**: Hardware-accelerated animations
+- **SEO Optimized**: Proper meta tags and structured content
 
-## Contributing & Usage
+## 🔧 Customization
 
-This project is open source, and you are welcome to use the code or parts of the code for your own site. I encourage you to modify the theme and components to make it your own. However, please do not present any of the projects featured on this site as your own. The content of this portfolio is personal and represents real projects I’ve worked on.
+The portfolio is designed to be easily customizable:
+- Update project details in `projectDetails.ts`
+- Modify colors in Tailwind config
+- Add new sections as needed
+- Customize animations and timing
 
-If you are using the site’s design largely unmodified, please credit me as the designer of the website.
+## 📄 License
 
-Incase you have any questions or concerns, please feel free to reach out to me on [Twitter.](https://twitter.com/shibaprasad__) I am always happy to help!
+This project is open source and available under the MIT License.
 
+---
 
-## Feedback
-
-While I would not be accepting contributions or pull requests at this time, I appreciate your feedback on this project. If you have any suggestions or questions, please don’t hesitate to reach out to me on [Twitter.](https://twitter.com/shibaprasad__) Your feedback is valuable and will help me improve.
-
-## License
-
-[MIT](https://choosealicense.com/licenses/mit/)
+Built with ❤️ by Shiba Prasad
