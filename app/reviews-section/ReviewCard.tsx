@@ -12,11 +12,6 @@ const BlogCard = ({
   testimonial,
   index,
 }: reviewProps) => {
-  const abbreviateName = (name: string): string => {
-    const [firstName, lastName] = name.split(" ");
-    return `${firstName} ${lastName[0]}.`;
-  };
-
   return (
     <motion.div
     initial={{ opacity: 0, y: 10 }}
@@ -47,10 +42,10 @@ const BlogCard = ({
 
       <div className="flex flex-col gap-1 sm:absolute sm:bottom-[28px] sm:left-[28px]">
         <h3 className="text-[23px] font-bold uppercase leading-[20.7px] tracking-[-0.46056px] text-[#e4ded7]">
-          {abbreviateName(name)}
+          {name}
         </h3>
         <p className="text-sm font-[500] leading-[16px] text-[#95979D]">
-          {role} @ {company}
+          {role}{company ? ` @ ${company}` : ''}
         </p>
       </div>
     </motion.div>
