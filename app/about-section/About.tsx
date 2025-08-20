@@ -49,7 +49,7 @@ const About = () => {
                         Gandhi Institute Of Engineering And Technology University, Gunupur (India)
                       </a>
                     </h4>
-                    <p className="text-[#e4ded7] font-semibold mb-1">2022 - NOW</p>
+                    <p className="text-[#e4ded7] font-semibold mb-1">2022 - 2026</p>
                     <p className="text-[#e4ded7] text-lg mb-1">Bachelor of Technology (B. Tech || Computer Science)</p>
                     <p className="text-[#e4ded7] text-base opacity-90">CGPA: 8.3/10</p>
                   </div>
@@ -69,7 +69,7 @@ const About = () => {
                         Nayagarh Autonomous College, Nayagarh (India)
                       </a>
                     </h4>
-                    <p className="text-[#e4ded7] font-semibold mb-1">2020 - 2022</p>
+                    <p className="text-[#e4ded7] font-semibold mb-1">2019 - 2021</p>
                     <p className="text-[#e4ded7] text-lg mb-1">Intermediate (Science)</p>
                     <p className="text-[#e4ded7] text-base opacity-90">Percentage: 85.67%</p>
                   </div>
