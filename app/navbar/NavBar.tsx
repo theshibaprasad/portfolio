@@ -63,7 +63,7 @@ const NavBar = () => {
       }`}
     >
       <Link
-        href="https://drive.google.com/file/d/1xGVrLyOd8prUy0cy-GBZo-Zk8wWNjPUl/view?usp=sharing"
+        href="https://drive.google.com/file/d/11RasUfml4pihACU04u9yJAu1T_cOL7Ns/view"
         target="_blank"
         className="flex"
         aria-label="Open my resume"
