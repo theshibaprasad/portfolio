@@ -16,6 +16,9 @@ export const metadata: Metadata = {
     "Frontend Engineer and Web Designer, currently at Kora. Focused on interfaces and experiences, working remotely from Lagos, Nigeria.",
   generator: "Next.js",
   applicationName: "Shiba Prasad",
+  verification: {
+    google: "NssvxIZAkrKLHJ4WKoDtDemBImwkN-GFhUB8cqtbPKw",
+  },
   keywords: [
     "freelance",
     "developer",
