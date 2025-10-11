@@ -25,13 +25,13 @@ export const devProjects = [
   },
   {
     id: 1,
-    name: "Fizzi",
+    name: "Coca-Cola",
     description:
       "A modern, responsive landing page built with Next.js, Three.js, and GSAP, featuring interactive 3D elements like a soda can, smooth animations, and dynamic sections.",
     technologies: ["Next.Js","Three.Js", "Tailwind CSS", "GSAP"],
-    github: "https://github.com/theshibaprasad/3d-soda-landing",
-    demo: "https://3d-soda-landing.vercel.app/",
-    image: require(".//../../public/projects/fizzi.png"),
+    github: "https://github.com/theshibaprasad/Coca-Cola_3D_landing",
+    demo: "https://coca-cola-3d-landing.vercel.app/",
+    image: require(".//../../public/projects/Coca_Cola.png"),
     available: true,
   },
   {
