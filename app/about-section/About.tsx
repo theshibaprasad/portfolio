@@ -97,7 +97,7 @@ const About = () => {
             </div>
             <div className="flex flex-col gap-3">
               <AnimatedTitle
-                text={"Backend & Full-Stack Technologies"}
+                text={"Backend Technologies"}
                 className={
                   "text-[24px] text-[#e4ded7] md:text-[30px] lg:text-[20px]"
                 }
@@ -106,7 +106,7 @@ const About = () => {
               />
               <AnimatedBody
                 text={
-                  "Express.js, Ruby on Rails, RESTful APIs, MongoDB, MySQL, JWT / NextAuth Authentication, Git & GitHub, Docker, Deployment (Vercel, Render), Agile Development"
+                  "Express.js, Ruby on Rails, RESTful APIs, MongoDB, MySQL, JWT, Git & GitHub, Deployment (Vercel, Render)"
                 }
               />
             </div>
@@ -121,7 +121,7 @@ const About = () => {
               />
               <AnimatedBody
                 text={
-                  "C++, Python, JavaScript (ES6+), Ruby, SQL, Gemini AI, Generative AI, TensorFlow, DSA, Optimization, Debugging, UAV Systems (ArduPilot), IoT Basics"
+                  "C++, Python, JavaScript (ES6+), Ruby, SQL, Gemini AI, Generative AI, Debugging, UAV Systems (ArduPilot), IoT"
                 }
               />
             </div>
