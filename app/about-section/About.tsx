@@ -82,7 +82,7 @@ const About = () => {
           <div className="mb-24 flex w-[100%] flex-col gap-4 text-[18px] font-normal leading-relaxed tracking-wide text-[#e4ded7]/80 sm:mb-32 md:mb-40 md:gap-6 md:text-[16px] md:leading-normal lg:mt-0 lg:mb-16 lg:max-w-[30%] lg:text-[18px]">
             <div className="flex flex-col gap-4 md:gap-3">
               <AnimatedTitle
-                text={"Frontend Tools"}
+                text={"Frontend Development"}
                 className={
                   "text-[24px] text-[#e4ded7] md:text-[30px] lg:text-[20px]"
                 }
@@ -91,13 +91,13 @@ const About = () => {
               />
               <AnimatedBody
                 text={
-                  "JavaScript (ES6+), React, Next.js, TypeScript, Prismic CMS, Redux, Redux Toolkit, React Testing Library, Vitetest, HTML5, Git/GitHub, NextAuth, Formik."
+                  "React.js, Next.js, Redux / Context API, Tailwind CSS, Material UI, Shadcn UI, Framer Motion, HTML5, CSS, Vite"
                 }
               />
             </div>
             <div className="flex flex-col gap-3">
               <AnimatedTitle
-                text={"UI Libraries"}
+                text={"Backend & Full-Stack Technologies"}
                 className={
                   "text-[24px] text-[#e4ded7] md:text-[30px] lg:text-[20px]"
                 }
@@ -106,13 +106,13 @@ const About = () => {
               />
               <AnimatedBody
                 text={
-                  "CSS3/SCSS/SASS, Tailwind CSS, Material UI, Framer Motion, GSAP, Bootstrap, Chart.js."
+                  "Express.js, Ruby on Rails, RESTful APIs, MongoDB, MySQL, JWT / NextAuth Authentication, Git & GitHub, Docker, Deployment (Vercel, Render), Agile Development"
                 }
               />
             </div>
             <div className="flex flex-col gap-3">
               <AnimatedTitle
-                text={"Languages"}
+                text={"AI, Programming Languages & Other Tools"}
                 className={
                   "text-[24px] text-[#e4ded7] md:text-[30px] lg:text-[20px]"
                 }
@@ -121,7 +121,7 @@ const About = () => {
               />
               <AnimatedBody
                 text={
-                  "C++, Python, Java, JavaScript, GOLang, SQL"
+                  "C++, Python, JavaScript (ES6+), Ruby, SQL, Gemini AI, Generative AI, TensorFlow, DSA, Optimization, Debugging, UAV Systems (ArduPilot), IoT Basics"
                 }
               />
             </div>
