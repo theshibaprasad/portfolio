@@ -28,7 +28,7 @@ const Hero = ({ isLoading, setIsLoading, setLoadProgress }: { isLoading: boolean
         <div className="relative z-10 h-full w-full">
           <motion.div className="absolute left-0 top-0 right-0 bottom-0 h-full w-full bg-[#0E1016] mix-blend-color opacity-20"></motion.div>
 
-          <div className="absolute top-16 flex justify-between sm:w-[90%] lg:max-w-[1440px] left-0 right-0 mx-auto px-4 md:px-0">
+          <div className="absolute top-16 flex justify-center sm:justify-between sm:w-[90%] lg:max-w-[1440px] left-0 right-0 mx-auto px-4 md:px-0">
             <div>
               <motion.p
                 className="hidden text-[#e4ded7] sm:block md:text-[18px] lg:block font-mono"
@@ -89,7 +89,7 @@ const Hero = ({ isLoading, setIsLoading, setLoadProgress }: { isLoading: boolean
                 />
               </div>
 
-              <div className="translate-y-64 sm:translate-y-40 md:translate-y-52 lg:translate-y-64 translate-x-24 sm:translate-x-20">
+              <div className="self-end md:self-auto translate-y-64 sm:translate-y-40 md:translate-y-52 lg:translate-y-64 md:translate-x-20">
                 <AnimatedWords
                   title="PRASAD"
                   style="inline-block overflow-hidden pt-1 -mr-4 sm:-mr-5 md:-mr-7 lg:-mr-9 -mb-1 sm:-mb-2 md:-mb-3 lg:-mb-4 text-[#e4ded7]"

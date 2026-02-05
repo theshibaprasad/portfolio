@@ -137,7 +137,7 @@ const HeroScrollBackground = ({ setIsLoaded, setLoadProgress }: { setIsLoaded: (
                 className="absolute inset-0 z-0 h-full w-full object-cover"
             />
             {/* Dark Overlay for text readability */}
-            <div className="absolute inset-0 z-0 bg-[#0E1016]/30 mix-blend-multiply pointer-events-none" />
+            <div className="absolute inset-0 z-0 bg-[#0E1016]/10 mix-blend-multiply pointer-events-none" />
         </>
     );
 };
