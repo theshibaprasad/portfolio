@@ -95,7 +95,7 @@ const Hero = () => {
               </div>
 
               {/* TypingRoles component positioned: Mobile (Center Bottom), Desktop (Left Bottom) */}
-              <div className="absolute left-1/2 -translate-x-1/2 sm:left-0 sm:translate-x-10 bottom-[-320px] sm:bottom-[-170px] md:bottom-[-200px] lg:bottom-[-240px] text-center sm:text-left whitespace-nowrap">
+              <div className="absolute left-1/2 -translate-x-1/2 sm:left-0 sm:translate-x-10 bottom-[-96px] sm:bottom-[-170px] md:bottom-[-200px] lg:bottom-[-240px] text-center sm:text-left whitespace-nowrap">
                 <motion.div variants={bodyAnimation}>
                   <TypingRoles />
                 </motion.div>
