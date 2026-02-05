@@ -13,7 +13,7 @@ const syne = Syne({
 export const metadata: Metadata = {
   title: "Shiba Prasad — Frontend Engineer",
   description:
-    "Frontend Engineer and Web Designer, currently at Kora. Focused on interfaces and experiences, working remotely from Lagos, Nigeria.",
+    "Frontend Engineer and Web Designer, currently based in India. Focused on interfaces and experiences.",
   generator: "Next.js",
   applicationName: "Shiba Prasad",
   verification: {
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     "creative developer",
     "creative engineer",
     "tech",
-    "nigeria",
+    "india",
     "software",
     "software developer",
     "portfolio",
@@ -42,12 +42,12 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Shiba Prasad — Frontend Engineer",
     description:
-      "Frontend Engineer and Web Designer, currently at Kora. Focused on interfaces and experiences, working remotely from Lagos, Nigeria.",
+      "Frontend Engineer and Web Designer, currently based in India. Focused on interfaces and experiences.",
     url: "https://www.shibaprasad.me/",
     siteName: "www.shibaprasad.me",
     images: [
       {
-        url: "https://user-images.githubusercontent.com/84178696/228620835-e3cc5c9b-72fc-4f54-a628-407ef7b650f5.png",
+        url: "https://portfolio-mocha-rho-94.vercel.app/hero_section_Images/ezgif-frame-001.jpg",
         width: 1200,
         height: 630,
         alt: "Shiba Prasad — Frontend Engineer",
@@ -60,11 +60,11 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Shiba Prasad — Frontend Engineer",
     description:
-      "Frontend Engineer and Web Designer, currently at Kora. Focused on interfaces and experiences, working remotely from Lagos, Nigeria.",
-    creator: "shibaprasad__",
+      "Frontend Engineer and Web Designer, currently based in India. Focused on interfaces and experiences.",
+    creator: "@theshibaprasad",
     creatorId: "1243720976552144897",
     images: [
-      "https://user-images.githubusercontent.com/84178696/228620835-e3cc5c9b-72fc-4f54-a628-407ef7b650f5.png",
+      "https://portfolio-mocha-rho-94.vercel.app/hero_section_Images/ezgif-frame-001.jpg",
     ],
   },
   robots: {
