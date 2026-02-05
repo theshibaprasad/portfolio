@@ -17,7 +17,8 @@ const ProjectCard = ({
   demo,
   image,
   available,
-}: ProjectProps) => {
+  priority = false, // Default to false
+}: ProjectProps & { priority?: boolean }) => {
   return (
     <motion.div
       style={{
@@ -41,13 +42,12 @@ const ProjectCard = ({
           height={300}
           className="w-full h-auto object-contain rounded-3xl"
           sizes="(max-width: 640px) 65vw, (max-width: 768px) 60vw, 55vw"
-          priority={false}
+          priority={priority}
         />
       </div>
       <div
-        className={`absolute top-0 text-[#0E1016] ${
-          id % 2 === 0 ? "left-0 ml-4 sm:ml-8 lg:ml-14" : "right-0 mr-4 sm:mr-8 lg:mr-14"
-        } mt-4 flex items-center justify-center gap-3 sm:gap-4 lg:mt-10`}
+        className={`absolute top-0 text-[#0E1016] ${id % 2 === 0 ? "left-0 ml-4 sm:ml-8 lg:ml-14" : "right-0 mr-4 sm:mr-8 lg:mr-14"
+          } mt-4 flex items-center justify-center gap-3 sm:gap-4 lg:mt-10`}
       >
         {available ? (
           <>
@@ -106,11 +106,10 @@ const ProjectCard = ({
         )}
       </div>
       <div
-        className={`absolute text-white ${
-          !(id % 2 === 0)
+        className={`absolute text-white ${!(id % 2 === 0)
             ? "right-0 top-16 mr-0 ml-6 sm:top-24 sm:ml-10 md:right-0 md:ml-0 md:top-28 lg:right-0 lg:top-48 lg:mr-4"
             : "left-6 top-16 ml-0 sm:left-10 sm:top-24 md:mr-12 md:top-28 lg:top-44 lg:ml-4"
-        } mb-6 sm:mb-10 md:mb-16 lg:mb-14`}
+          } mb-6 sm:mb-10 md:mb-16 lg:mb-14`}
       >
         <AnimatedTitle
           text={name}

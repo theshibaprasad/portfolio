@@ -3,22 +3,14 @@
 import { useScroll, useTransform, useMotionValueEvent } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 
-const HeroScrollBackground = () => {
+const HeroScrollBackground = ({ setIsLoaded, setLoadProgress }: { setIsLoaded: (loaded: boolean) => void, setLoadProgress: (progress: number) => void }) => {
     const canvasRef = useRef<HTMLCanvasElement>(null);
     const [images, setImages] = useState<HTMLImageElement[]>([]);
-    const [loadProgress, setLoadProgress] = useState(0);
-    const [isLoaded, setIsLoaded] = useState(false);
+    // const [loadProgress, setLoadProgress] = useState(0); 
+    const [isInternalLoaded, setIsInternalLoaded] = useState(false);
 
     // We have 200 frames
     const frameCount = 200;
-
-    // We use user scroll on the WINDOW or a parent container? 
-    // Since this component will be inside a tall sticky container in Hero.tsx, 
-    // we can use the window scroll or a specific ref passed down.
-    // Actually, standard useScroll() tracks the viewport scroll by default if no target is set.
-    // BUT, we want it to map to the scroll of the PARENT section.
-    // Let's rely on the parent container (Hero.tsx section) and use absolute window scroll? 
-    // No, easiest is to just track window scroll progress over the initial viewport height * 4
 
     const { scrollY } = useScroll(); // Absolute scroll Y in pixels
 
@@ -43,39 +35,37 @@ const HeroScrollBackground = () => {
         let isMounted = true;
         const basePath = "/hero_section_Images";
 
+        // Initialize images array immediately so we can populate it progressively
+        const loadedImages: HTMLImageElement[] = new Array(frameCount).fill(null);
+        setImages(loadedImages); // Set initial empty array
+
         const loadImages = async () => {
-            const loadedImages: HTMLImageElement[] = new Array(frameCount).fill(null);
+            // We don't need to await all of them to start showing something.
+            // But we do want to track them.
             let loadedCount = 0;
 
-            const imagePromises = Array.from({ length: frameCount }, (_, i) => {
-                return new Promise<void>((resolve) => {
-                    const img = new Image();
-                    const index = i + 1;
-                    const formattedIndex = index.toString().padStart(3, "0");
-                    const src = `${basePath}/ezgif-frame-${formattedIndex}.jpg`;
+            for (let i = 0; i < frameCount; i++) {
+                const img = new Image();
+                const index = i + 1;
+                const formattedIndex = index.toString().padStart(3, "0");
+                const src = `${basePath}/ezgif-frame-${formattedIndex}.jpg`;
 
-                    img.src = src;
+                img.src = src;
 
-                    img.onload = () => {
-                        if (!isMounted) return;
-                        loadedImages[i] = img;
-                        loadedCount++;
-                        setLoadProgress(Math.round((loadedCount / frameCount) * 100));
-                        resolve();
-                    };
+                img.onload = () => {
+                    if (!isMounted) return;
+                    loadedImages[i] = img;
+                    loadedCount++;
+                    setLoadProgress(Math.round((loadedCount / frameCount) * 100));
 
-                    img.onerror = () => {
-                        console.warn(`Failed to load: ${src}`);
-                        resolve();
-                    };
-                });
-            });
+                    // Wait for ALL images to load before showing the hero
+                    if (loadedCount === frameCount) {
+                        setIsInternalLoaded(true);
+                        setIsLoaded(true);
+                    }
 
-            await Promise.all(imagePromises);
-
-            if (isMounted) {
-                setImages(loadedImages);
-                setIsLoaded(true);
+                    // Force re-render if it's the current frame (optional optimization)
+                };
             }
         };
 
@@ -84,11 +74,12 @@ const HeroScrollBackground = () => {
         return () => {
             isMounted = false;
         };
-    }, []);
+    }, [setIsLoaded, setLoadProgress]);
 
     const renderCanvas = (index: number) => {
         const canvas = canvasRef.current;
-        if (!canvas || images.length === 0) return;
+        // Allows rendering even if not ALL images are loaded, strictly check if the SPECIFIC image exists
+        if (!canvas) return;
 
         const ctx = canvas.getContext("2d");
         if (!ctx) return;
@@ -102,7 +93,10 @@ const HeroScrollBackground = () => {
         }
 
         const rawIndex = Math.floor(index) - 1;
-        const imageIndex = Math.min(Math.max(rawIndex, 0), images.length - 1);
+        // Clamp index
+        const imageIndex = Math.min(Math.max(rawIndex, 0), frameCount - 1);
+
+        // Check if the image at this index is loaded
         const img = images[imageIndex];
 
         ctx.clearRect(0, 0, width, height);
@@ -116,33 +110,28 @@ const HeroScrollBackground = () => {
     };
 
     useMotionValueEvent(frameIndex, "change", (latest) => {
-        if (isLoaded) {
-            requestAnimationFrame(() => renderCanvas(latest));
-        }
+        // Always try to render if we have started
+        requestAnimationFrame(() => renderCanvas(latest));
     });
 
     useEffect(() => {
-        if (isLoaded) {
+        // Initial render attempt once we are "loaded" (first frame ready)
+        if (isInternalLoaded) {
             renderCanvas(1);
         }
-    }, [isLoaded]);
+    }, [isInternalLoaded]);
 
     // Handle resizing
     useEffect(() => {
         const handleResize = () => {
-            if (isLoaded) renderCanvas(frameIndex.get());
+            renderCanvas(frameIndex.get());
         };
         window.addEventListener("resize", handleResize);
         return () => window.removeEventListener("resize", handleResize);
-    }, [isLoaded, frameIndex]);
+    }, [images]); // Depend on images so if new ones load we might theoretically re-render, though the loop handles it
 
     return (
         <>
-            {!isLoaded && (
-                <div className="absolute inset-0 z-0 flex items-center justify-center bg-[#0E1016]">
-                    <div className="text-[#e4ded7] font-mono">Loading... {loadProgress}%</div>
-                </div>
-            )}
             <canvas
                 ref={canvasRef}
                 className="absolute inset-0 z-0 h-full w-full object-cover"

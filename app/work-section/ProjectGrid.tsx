@@ -46,6 +46,7 @@ const ProjectGrid = () => {
               demo={project.demo}
               image={project.image}
               available={project.available}
+              priority={index < 2} // Prioritize first 2 images
             />
           </div>
         ))}

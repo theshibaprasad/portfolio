@@ -5,7 +5,7 @@ import gsap from "gsap";
 const tl = gsap.timeline();
 
 // Preloader Animation
-export const preLoaderAnim = () => {
+export const preLoaderAnim = (onComplete) => {
   tl.to(".texts-container", {
     duration: 0,
     opacity: 1,
@@ -36,21 +36,22 @@ export const preLoaderAnim = () => {
       opacity: 0,
       y: 80,
       ease: "expo.easeOut",
-    })
-    .to(
-      ".preloader",
-      {
-        duration: 1.5,
-        height: "0vh",
-        ease: "Power3.easeOut",
-        onComplete: mobileLanding(),
-      },
-      "-=2"
-    )
-    .to(".preloader", {
+      onComplete: onComplete, // Signal that intro is done
+    });
+};
+
+export const exitPreLoader = () => {
+  const tlExit = gsap.timeline();
+  tlExit.to(".preloader", {
+    duration: 1.5,
+    height: "0vh",
+    ease: "Power3.easeOut",
+    onComplete: mobileLanding,
+  })
+  .to(".preloader", {
       duration: 0,
       css: { display: "none" },
-    });
+  });
 };
 
 export const mobileLanding = () => {

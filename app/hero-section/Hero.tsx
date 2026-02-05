@@ -10,17 +10,19 @@ import TypingRoles from "../animations/TypingRoles";
 // import profile from "../../public/profile.webp";
 import HeroScrollBackground from "./HeroScrollBackground"; // Import the new background component
 
-const Hero = () => {
+import { useState } from "react";
+
+const Hero = ({ isLoading, setIsLoading, setLoadProgress }: { isLoading: boolean, setIsLoading: (loading: boolean) => void, setLoadProgress: (progress: number) => void }) => {
   return (
     <motion.section
       className="relative h-[400vh] w-full bg-[#0E1016]"
       id="home"
       initial="initial"
-      animate="animate"
+      animate={isLoading ? "initial" : "animate"}
     >
       <div className="sticky top-0 h-screen w-full overflow-hidden">
         {/* The Scrollytelling Background */}
-        <HeroScrollBackground />
+        <HeroScrollBackground setIsLoaded={setIsLoading} setLoadProgress={setLoadProgress} />
 
         {/* Existing Content */}
         <div className="relative z-10 h-full w-full">

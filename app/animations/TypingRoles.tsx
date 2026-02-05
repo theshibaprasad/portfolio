@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useEffect, useState, memo } from "react";
 import { useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
@@ -32,7 +32,7 @@ const TypingRoles: React.FC = () => {
       // Delay the start of typing animation to match hero sequence
       const typingDelay = setTimeout(() => {
         setStartTyping(true);
-      }, 6500); // 4 seconds delay to appear after name + profile picture
+      }, 500); // Reduced from 6500ms
       return () => clearTimeout(typingDelay);
     }
     if (!inView) {
@@ -193,4 +193,4 @@ const TypingRoles: React.FC = () => {
   );
 };
 
-export default TypingRoles;
+export default memo(TypingRoles);

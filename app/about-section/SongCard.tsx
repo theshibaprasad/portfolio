@@ -12,6 +12,8 @@ const SongCard = ({ title, artist, image, link }: SongProps) => {
           src={image}
           alt={title}
           className="w-full items-stretch justify-center rounded-xl bg-cover bg-center"
+          loading="lazy"
+          priority={false}
         />
         <div className=" hidden h-[150%] w-full bg-gradient-to-t from-black to-transparent"></div>
 

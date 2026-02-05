@@ -1,7 +1,7 @@
 "use client";
 import Hero from "./hero-section/Hero";
 import useBlobity from "blobity/lib/react/useBlobity";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import { ScrollerMotion } from "scroller-motion";
 import PreLoader from "./animations/PreLoader/PreLoader";
 import { initialBlobityOptions } from "./utils/BlobityConfig";
@@ -16,6 +16,9 @@ const Footer = dynamic(() => import("./footer/Footer"));
 
 export default function Home() {
   const blobityInstance = useBlobity(initialBlobityOptions);
+  const [heroReady, setHeroReady] = useState(false); // false means NOT ready (loading)
+  const [loadProgress, setLoadProgress] = useState(0);
+  const [introDone, setIntroDone] = useState(false);
 
   useEffect(() => {
     if (blobityInstance.current) {
@@ -33,17 +36,23 @@ export default function Home() {
 
   return (
     <>
-      <PreLoader />
+      <PreLoader heroReady={heroReady} loadProgress={loadProgress} setIntroDone={setIntroDone} />
 
       {/* <ScrollerMotion> */}
       <main className="flex flex-col items-center justify-center">
         <NavBar />
-        <Hero />
-        <Work />
-        <Reviews />
-        <About />
-        <Contact />
-        <Footer />
+        <Hero isLoading={!heroReady || !introDone} setIsLoading={setHeroReady} setLoadProgress={setLoadProgress} />
+
+        {/* Defer loading of non-critical sections until Hero is ready to ensure image loading priority */}
+        {heroReady && (
+          <>
+            <Work />
+            <Reviews />
+            <About />
+            <Contact />
+            <Footer />
+          </>
+        )}
       </main>
       {/* </ScrollerMotion> */}
     </>
