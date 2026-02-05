@@ -32,8 +32,17 @@
 html,
 body {
   overscroll-behavior: none;
+  background-color: #121212;
+  color: #ededed;
 }
 
 body {
-  overflow-y: hidden;
+  overflow-y: auto;
+}
+
+/* Force vertical text orientation and lock rotation */
+.vertical-text-fixed {
+  writing-mode: vertical-rl !important;
+  transform: rotate(180deg) !important;
+  white-space: nowrap;
 }

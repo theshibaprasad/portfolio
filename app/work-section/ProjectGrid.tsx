@@ -27,11 +27,18 @@ const ProjectGrid = () => {
       </div> */}
 
       {/* {filter ? ( */}
-        <div className="grid w-[90%] grid-cols-1 grid-rows-2 gap-y-10 gap-x-6 lg:max-w-[1200px] lg:grid-cols-1">
-          {devProjects.map((project: ProjectProps) => (
+      <div className="flex w-[90%] flex-col items-center justify-center gap-y-10 lg:max-w-[1200px]">
+        {devProjects.map((project: ProjectProps, index: number) => (
+          <div
+            key={project.id}
+            className="sticky w-full rounded-3xl border border-[#e4ded7]/20 bg-[#212531]"
+            style={{
+              top: `calc(290px + ${index * 20}px)`,
+              zIndex: index + 1,
+            }}
+          >
             <ProjectCard
               id={project.id}
-              key={project.id}
               name={project.name}
               description={project.description}
               technologies={project.technologies}
@@ -40,8 +47,9 @@ const ProjectGrid = () => {
               image={project.image}
               available={project.available}
             />
-          ))}
-        </div>
+          </div>
+        ))}
+      </div>
       {/* ) : (
         <div className="grid w-[90%] grid-cols-1 grid-rows-2 gap-y-6 gap-x-6 lg:max-w-[1200px] lg:grid-cols-1">
           {designProjects.map((project: ProjectProps) => (

@@ -31,7 +31,7 @@ export const reviewDetails = [
   {
     name: "Rashmi Ranjan",
     role: "Security Analyst",
-    company: "Cyberyaan",
+    company: "TCS",
     testimonial:
       "Shiba is hardworking and has great sense of ownership. He was able to contribute in engineering excellent user interfaces and user experiences at Mono. I'm confident he will be a great asset to any engineering team.",
   },
@@ -45,7 +45,7 @@ export const reviewDetails = [
   {
     name: "Jay Sahoo",
     role: "Sales Specialist",
-    company: "HighRadius",
+    company: "ITC Infotech",
     testimonial:
       "Very talented and amazing freelancer. Very easy to communicate with, pleasure to work with. Outstanding attention to detail, and works as fast as possible while also delivering amazing work.",
   },

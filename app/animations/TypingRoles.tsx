@@ -7,7 +7,7 @@ const TypingRoles: React.FC = () => {
   const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
   const [displayText, setDisplayText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
-  const [characters, setCharacters] = useState<Array<{char: string, id: number}>>([]);
+  const [characters, setCharacters] = useState<Array<{ char: string, id: number }>>([]);
   const [nextId, setNextId] = useState(0);
   const [startTyping, setStartTyping] = useState(false);
   const ctrls = useAnimation();
@@ -19,7 +19,7 @@ const TypingRoles: React.FC = () => {
 
   const roles = [
     "MERN STACK DEVELOPER",
-    "FULLSTACK DEVELOPER", 
+    "FULLSTACK DEVELOPER",
     "FRONTEND DEVELOPER",
     "DRONE DEVELOPER",
     "GENAI DEVELOPER",
@@ -42,9 +42,9 @@ const TypingRoles: React.FC = () => {
 
   useEffect(() => {
     if (!startTyping) return; // Don't start typing until delay is complete
-    
+
     const currentRole = roles[currentRoleIndex];
-    
+
     if (!isDeleting) {
       // Typing effect
       if (displayText.length < currentRole.length) {
@@ -123,14 +123,14 @@ const TypingRoles: React.FC = () => {
   };
 
   const characterAnimation = {
-    initial: { 
-      scale: 0.8, 
+    initial: {
+      scale: 0.8,
       opacity: 0,
       y: 10,
       filter: "blur(2px)"
     },
-    animate: { 
-      scale: 1, 
+    animate: {
+      scale: 1,
       opacity: 1,
       y: 0,
       filter: "blur(0px)",
@@ -142,8 +142,8 @@ const TypingRoles: React.FC = () => {
         ease: [0.25, 0.46, 0.45, 0.94]
       }
     },
-    exit: { 
-      scale: 1, 
+    exit: {
+      scale: 1,
       opacity: 0,
       y: -5,
       filter: "blur(1px)",
@@ -162,12 +162,12 @@ const TypingRoles: React.FC = () => {
       variants={containerAnimation}
       className="text-center flex flex-col items-center justify-center"
     >
-      <div 
+      <div
         className="relative overflow-visible py-2"
         style={{ minHeight: "1.4em" }}
       >
-        <motion.h2 
-          className="text-[24px] font-bold text-[#e4ded7] sm:text-[32px] md:text-[40px] lg:text-[48px]"
+        <motion.h2
+          className="text-[32px] font-bold text-[#e4ded7] sm:text-[40px] md:text-[48px] lg:text-[56px]"
           initial="initial"
           animate="animate"
           variants={textAnimation}

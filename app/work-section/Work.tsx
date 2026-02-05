@@ -10,7 +10,7 @@ const Work = () => {
       id="work"
     >
       <div
-        className={`relative mb-16 flex w-full flex-col items-center justify-center gap-10  text-[#e4ded7] sm:items-center lg:max-w-[1440px]`}
+        className={`sticky top-0 z-50 w-full bg-[#0E1016] py-10 mb-4 flex flex-col items-center justify-center gap-10 text-[#e4ded7] sm:items-center lg:max-w-[1440px]`}
       >
         <AnimatedWords2
           title={"PROJECTS"}

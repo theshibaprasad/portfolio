@@ -40,7 +40,7 @@ export default function Home() {
         <NavBar />
         <Hero />
         <Work />
-        <Reviews/>
+        <Reviews />
         <About />
         <Contact />
         <Footer />
