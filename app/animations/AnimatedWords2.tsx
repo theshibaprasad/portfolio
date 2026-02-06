@@ -49,7 +49,7 @@ const AnimatedWords2: React.FC<AnimatedWords2Props> = ({ title, style }) => {
             key={index}
             initial="initial"
             animate={ctrls}
-            className="flex items-center justify-center overflow-hidden last:-mr-10 pb-2 sm:pb-0"
+            className="flex items-center justify-center overflow-hidden pb-2 sm:pb-0"
             transition={{
               delayChildren: index * 0.25,
               staggerChildren: 0.05,
@@ -59,7 +59,7 @@ const AnimatedWords2: React.FC<AnimatedWords2Props> = ({ title, style }) => {
               className="-mb-4 inline-block overflow-hidden pt-1 sm:-mb-2 md:-mb-3 lg:-mb-4"
               variants={wordAnimation2}
             >
-              {word + "\u00A0"}
+              {word + (index !== title.split(" ").length - 1 ? "\u00A0" : "")}
             </motion.span>
           </motion.div>
         ))}
