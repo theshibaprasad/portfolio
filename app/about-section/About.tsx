@@ -2,6 +2,8 @@ import SongCarousel from "./SongCarousel";
 import "../animations/animate.css";
 import AnimatedBody from "../animations/AnimatedBody";
 import AnimatedTitle from "../animations/AnimatedTitle";
+import AnimatedWords2 from "../animations/AnimatedWords2";
+import { monaSans } from "../fonts/monaSans";
 
 const About = () => {
   return (
@@ -10,6 +12,18 @@ const About = () => {
       id="about"
     >
       <div className="mx-auto flex w-[90%] flex-col items-center justify-center lg:max-w-[1212.8px]">
+        <div
+          className={`relative mb-16 flex w-full flex-col items-center justify-center gap-10  text-[#e4ded7] sm:items-center lg:max-w-[1440px]`}
+        >
+          <AnimatedWords2
+            title={"ABOUT ME"}
+            style={`flex max-w-[500px] flex-col items-start text-left pr-5 ${monaSans.className} font-extrabold uppercase leading-[0.9em] text-[#e4ded7] sm:max-w-full sm:flex-row sm:items-center sm:justify-center sm:text-center lg:text-center text-[clamp(70px,14vw,155.04px)]`}
+          />
+          <AnimatedBody
+            text="Discover the person behind the pixels and code."
+            className="w-[90%] text-center text-[14px] font-semibold uppercase sm:w-[500px] md:w-[550px] md:text-[16px]"
+          />
+        </div>
         <AnimatedTitle
           text={
             "I MAKE BRANDS BEAUTIFUL, WEBSITES POWERFUL AND CONTENT CAPTIVATING."
@@ -23,26 +37,26 @@ const About = () => {
 
         <div className="mx-auto flex w-[100%] flex-col lg:max-w-[1200px] lg:flex-row lg:gap-20">
           <div className="mb-10 flex w-[100%] flex-col gap-4 text-[18px] font-medium  leading-relaxed tracking-wide text-[#e4ded7] md:mb-16 md:gap-6 md:text-[20px] md:leading-relaxed lg:mb-16  lg:max-w-[90%] lg:text-[24px] ">
-            
+
             {/* Education Timeline */}
             <div className="relative">
               <div className="mb-8">
                 <h3 className="text-4xl font-bold text-[#e4ded7]">EDUCATION</h3>
               </div>
-              
+
               {/* Timeline */}
               <div className="relative pl-8">
                 {/* Timeline line */}
                 <div className="absolute left-4 top-0 bottom-0 w-1 bg-white"></div>
-                
+
                 {/* First Education Entry */}
                 <div className="relative mb-8">
                   <div className="absolute left-[-1.4rem] top-2 w-4 h-4 bg-white rounded-full border-2 border-white/80 shadow-lg shadow-white/20"></div>
                   <div className="ml-4">
                     <h4 className="text-xl font-bold text-[#e4ded7] mb-2">
-                      <a 
-                        href="https://www.giet.edu/" 
-                        target="_blank" 
+                      <a
+                        href="https://www.giet.edu/"
+                        target="_blank"
                         rel="noopener noreferrer"
                         className="hover:text-yellow-400 transition-colors duration-300 cursor-pointer"
                       >
@@ -54,15 +68,15 @@ const About = () => {
                     <p className="text-[#e4ded7] text-base opacity-90">CGPA: 8.3/10</p>
                   </div>
                 </div>
-                
+
                 {/* Second Education Entry */}
                 <div className="relative">
                   <div className="absolute left-[-1.4rem] top-2 w-4 h-4 bg-white rounded-full border-2 border-white/80 shadow-lg shadow-white/20"></div>
                   <div className="ml-4">
                     <h4 className="text-xl font-bold text-[#e4ded7] mb-2">
-                      <a 
-                        href="https://ngrautocol.ac.in/" 
-                        target="_blank" 
+                      <a
+                        href="https://ngrautocol.ac.in/"
+                        target="_blank"
                         rel="noopener noreferrer"
                         className="hover:text-yellow-400 transition-colors duration-300 cursor-pointer"
                       >
