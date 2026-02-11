@@ -52,8 +52,8 @@ const NavBar = () => {
         ${isVisible ? "translate-y-0" : "translate-y-20"}
 
         /* Desktop Styles (Left Center Vertical) */
-        md:left-5 md:top-1/2 md:bottom-auto md:flex-col md:gap-5 md:px-3 md:py-6 md:translate-x-0 md:-translate-y-1/2
-        ${isVisible ? "md:mt-0" : "md:mt-24"}
+        lg:left-5 lg:top-1/2 lg:bottom-auto lg:flex-col lg:gap-5 lg:px-3 lg:py-6 lg:translate-x-0 lg:-translate-y-1/2
+        ${isVisible ? "lg:mt-0" : "lg:mt-24"}
       `}
     >
       <Link
@@ -66,15 +66,15 @@ const NavBar = () => {
       >
         <FontAwesomeIcon
           icon={faFilePdf}
-          className="text-[20px] md:mb-2"
+          className="text-[20px] lg:mb-2"
         />
       </Link>
 
       {/* Divider: Vertical on mobile, Horizontal on desktop */}
-      <div className="h-4 w-[1px] bg-white/10 mx-1 md:w-full md:h-[1px] md:mx-0 md:my-1"></div>
+      <div className="h-4 w-[1px] bg-white/10 mx-1 lg:w-full lg:h-[1px] lg:mx-0 lg:my-1"></div>
 
       {/* MOBILE LINKS (Horizontal, Standard Text) */}
-      <div className="flex flex-row gap-4 md:hidden">
+      <div className="flex flex-row gap-4 lg:hidden">
         <Link
           href="#home"
           data-blobity-magnetic="false"
@@ -114,7 +114,7 @@ const NavBar = () => {
       </div>
 
       {/* DESKTOP LINKS (Vertical, Vertical Text with Forced Style) */}
-      <div className="hidden md:flex flex-col gap-5">
+      <div className="hidden lg:flex flex-col gap-5">
         <Link
           href="#home"
           data-blobity-magnetic="false"

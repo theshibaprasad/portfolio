@@ -9,6 +9,7 @@ import AnimatedWords from "../animations/AnimatedWords";
 import TypingRoles from "../animations/TypingRoles";
 // import profile from "../../public/profile.webp";
 import HeroScrollBackground from "./HeroScrollBackground"; // Import the new background component
+import ScrollDown from "./ScrollDown"; // Import the scroll down component
 
 import { useState } from "react";
 
@@ -80,29 +81,34 @@ const Hero = ({ isLoading, setIsLoading, setLoadProgress }: { isLoading: boolean
 
           <div className="absolute top-1/2 left-0 right-0 -translate-y-1/2 w-full flex justify-center">
             <div
-              className={`relative w-[95%] lg:max-w-[1440px] flex flex-col md:flex-row justify-center md:justify-between items-start md:items-center ${monaSans.className}`}
+              className={`relative w-[95%] lg:max-w-[1440px] flex flex-col lg:flex-row justify-center lg:justify-between items-start lg:items-center ${monaSans.className}`}
             >
-              <div className="translate-y-64 sm:-translate-y-24 md:-translate-y-32 lg:-translate-y-44">
+              <div className="translate-y-64 lg:-translate-y-44">
                 <AnimatedWords
                   title="SHIBA"
-                  style="inline-block overflow-hidden pt-1 -mr-4 sm:-mr-5 md:-mr-7 lg:-mr-9 -mb-1 sm:-mb-2 md:-mb-3 lg:-mb-4 text-[#e4ded7]"
+                  style="inline-block overflow-hidden pt-1 -mr-4 lg:-mr-7 xl:-mr-9 -mb-1 lg:-mb-3 xl:-mb-4 text-[#e4ded7]"
                 />
               </div>
 
-              <div className="self-end md:self-auto translate-y-64 sm:translate-y-40 md:translate-y-52 lg:translate-y-64 md:translate-x-20">
+              <div className="self-end lg:self-auto translate-y-64 lg:translate-y-64">
                 <AnimatedWords
                   title="PRASAD"
-                  style="inline-block overflow-hidden pt-1 -mr-4 sm:-mr-5 md:-mr-7 lg:-mr-9 -mb-1 sm:-mb-2 md:-mb-3 lg:-mb-4 text-[#e4ded7]"
+                  style="inline-block overflow-hidden pt-1 -mr-4 lg:-mr-7 xl:-mr-9 -mb-1 lg:-mb-3 xl:-mb-4 text-[#e4ded7]"
                 />
               </div>
 
               {/* TypingRoles component positioned: Mobile (Center Bottom), Desktop (Left Bottom) */}
-              <div className="absolute left-1/2 -translate-x-1/2 sm:left-0 sm:translate-x-10 bottom-[-96px] sm:bottom-[-170px] md:bottom-[-200px] lg:bottom-[-240px] text-center sm:text-left whitespace-nowrap">
+              <div className="absolute left-1/2 -translate-x-1/2 md:translate-x-10 lg:left-0 lg:translate-x-10 bottom-[-96px] lg:bottom-[-240px] text-center lg:text-left whitespace-nowrap">
                 <motion.div variants={bodyAnimation}>
                   <TypingRoles />
                 </motion.div>
               </div>
             </div>
+          </div>
+
+          {/* Scroll Down Indicator - Desktop Only */}
+          <div className="absolute bottom-10 left-0 right-0 flex justify-center z-20">
+            <ScrollDown />
           </div>
         </div>
       </div>

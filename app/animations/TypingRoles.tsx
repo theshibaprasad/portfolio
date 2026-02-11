@@ -167,7 +167,7 @@ const TypingRoles: React.FC = () => {
         style={{ minHeight: "1.4em" }}
       >
         <motion.h2
-          className="text-[20px] font-bold text-[#e4ded7] sm:text-[40px] md:text-[48px] lg:text-[56px]"
+          className="text-[20px] font-bold text-[#e4ded7] sm:text-[40px] md:text-[36px] lg:text-[56px]"
           initial="initial"
           animate="animate"
           variants={textAnimation}
