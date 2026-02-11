@@ -9,7 +9,7 @@ import AnimatedWords from "../animations/AnimatedWords";
 import TypingRoles from "../animations/TypingRoles";
 // import profile from "../../public/profile.webp";
 import HeroScrollBackground from "./HeroScrollBackground"; // Import the new background component
-import ScrollDown from "./ScrollDown"; // Import the scroll down component
+
 
 import { useState } from "react";
 
@@ -106,10 +106,7 @@ const Hero = ({ isLoading, setIsLoading, setLoadProgress }: { isLoading: boolean
             </div>
           </div>
 
-          {/* Scroll Down Indicator - Desktop Only */}
-          <div className="absolute bottom-10 left-0 right-0 flex justify-center z-20">
-            <ScrollDown />
-          </div>
+
         </div>
       </div>
     </motion.section>
