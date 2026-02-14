@@ -63,9 +63,9 @@ export const devProjects = [
       "ArogyaFly is an AI-powered semi-autonomous drone for surveillance and emergency response. It detects humans for search and rescue, supports RTL, Battery Safety, and Position Hold for stable and reliable flight.",
     technologies: ["ArduPilot", "Python","Raspberry Pi", "IOT"],
     github: "https://github.com/theshibaprasad/stm32_",
-          demo: "https://flixify.shibaprasad.me/",
+          demo: "https://youtu.be/LPW_qr-TITc?si=1uJ9iBadp4ZlzSjs",
     image: require(".//../../public/projects/drone.png"),
-    available: false,
+    available: true,
   },
   
 ];
