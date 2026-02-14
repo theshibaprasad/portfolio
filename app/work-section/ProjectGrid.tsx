@@ -27,13 +27,13 @@ const ProjectGrid = () => {
       </div> */}
 
       {/* {filter ? ( */}
-      <div className="flex w-[90%] flex-col items-center justify-center gap-y-10 lg:max-w-[1200px]">
+      <div className="flex w-[90%] flex-col items-center justify-center gap-y-24 lg:max-w-[1200px]">
         {devProjects.map((project: ProjectProps, index: number) => (
           <div
             key={project.id}
             className="sticky w-full rounded-3xl border border-[#e4ded7]/20 bg-[#212531]"
             style={{
-              top: `calc(290px + ${index * 20}px)`,
+              top: "290px",
               zIndex: index + 1,
             }}
           >
